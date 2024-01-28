@@ -31,43 +31,7 @@
 <br>
   <a href="https://tzzz5656.github.io/16.html">第16种：五味子泡水主要功效</a>
 <br>
+script type="text/javascript"
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>访问人数</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script> <!-- 引入Vue.js -->
-</head>
-<body>
-    <div id="app">
-        <h1>当前访问人数：{{ count }}</h1>
-    </div>
-    
-    <script>
-        new Vue({ // 创建Vue实例
-            el: '#app', // 指定元素id为"app"作为根节点
-            data() {
-                return {
-                    count: 0 // 初始化访问人数为0
-                }
-            },
-            mounted() {
-                this.getVisitorCount(); // 在组件加载完成后调用函数获取访问人数
-            },
-            methods: {
-                getVisitorCount() {
-                    // 这里可以通过Ajax等技术向服务器发送请求并接收返回结果
-                    // 然后将结果更新到count属性中显示在页面上
-                    // 此处只是模拟了一种情景，实际应该与后台交互才能得到真正的访问人数
-                    setTimeout(() => {
-                        this.count = Math.floor(Math.random() * (50 - 20 + 1) + 20); // 生成一个20到50之间的随机数作为访问人数
-                    }, 3000); // 每隔3秒更新一次访问人数
-                }
-            }
-        });
-    </script>
-</body>
-</html>
-
+if (localStorage.pagecount){    localStorage.pagecount=Number(localStorage.pagecount) +1;}else{    localStorage.pagecount=1;}document.write("访问数: " + localStorage.pagecount + " time(s).");/script
 
